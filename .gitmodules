@@ -1,0 +1,6 @@
+[submodule "carlease-customer-service"]
+	path = carlease-customer-service
+	url = https://github.com/remideboer/carlease-customer-service.git
+[submodule "carlease-car-service"]
+	path = carlease-car-service
+	url = https://github.com/remideboer/carlease-car-service.git
