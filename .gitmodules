@@ -4,3 +4,7 @@
 [submodule "carlease-car-service"]
 	path = carlease-car-service
 	url = https://github.com/remideboer/carlease-car-service.git
+[submodule "carlease-gateway"]
+	path = carlease-gateway
+	url = https://github.com/remideboer/carlease-gateway.git
+	branch = master
