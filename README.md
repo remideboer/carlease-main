@@ -52,4 +52,33 @@ ports Gateway: 8080 Customer service: 9092 Car service: 9091
 - [x] DELETE: {domain}/customers/{id} - delete specific customer
 - [x] PUT:    {domain}/customers/{id} - update specific customer
 
+## get in
+
+Using the most secure overused password in the world.
+
+```
+admin:Welkom01
+broker:Welkom01
+```
+
+```
+POST {domain}/authenticate - authentication endpoint see below example 
+```
+
+POST authenticate request body example
+
+```json
+{
+  "username": "admin",
+  "password": "Welkom01"
+}
+```
+
+response example
+
+```json
+{
+    "id": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FybGVhc2UuY29tIiwic3ViIjoiYWRtaW4iLCJleHAiOjE2MjQwMzQzMTB9.BJ1CLXOpVjnTv8uEmjUgw6yrzMJhIzMOvqHsZKN0Av4"
+}
+```
 
