@@ -21,7 +21,18 @@ Three services are used: Gateway, Car Service, Customer Service. The services ca
 documentation in the README for each service cd into directory and use maven or use supplied script ```deploy.sh``` to
 clean package and run all 3 in one go.
 
-To brute force stop use ```terminate.sh```
+To brute force stop use ```terminate.sh```. Only works on *nix systems. On Windows use something like below, 
+or ```terminate.ps1```
+````
+netstat -ano | findstr :PORT_NUMBER
+taskkill /pid PORT_NUMBER /f
+// or power shell
+$ports= @('8080','9091','9092')
+foreach ($i in $ports) {
+    $processPID =  $($(netstat -aon | findstr $i)[0] -split '\s+')[-1]
+    taskkill /f /pid $processPID
+}
+````
 
 - [ ] future if time use docker compose.
 

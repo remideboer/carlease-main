@@ -2,13 +2,13 @@
 # straight forward cd-ing and calling mvn package for all services
 # skipping tests because JWT expiration time in test has not been adjusted
 cd carlease-gateway/
-mvn clean package -DskipTests
+mvn clean package
 pwd
 cd ../carlease-car-service/
-mvn clean package -DskipTests
+mvn clean package
 pwd
 cd ../carlease-customer-service/
-mvn clean package -DskipTests
+mvn clean package
 pwd
 # back to root
 cd ..
