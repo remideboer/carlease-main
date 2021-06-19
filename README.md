@@ -7,6 +7,8 @@ the recursive flag.
 git clone --recursive https://github.com/remideboer/carlease-main.git
 ```
 
+Works was started on Customer Service, which consequently has received the most work and attention
+
 ## Manage submodules
 
 Get latest updates from submodules
