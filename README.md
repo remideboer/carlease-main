@@ -7,13 +7,23 @@ the recursive flag.
 git clone --recursive https://github.com/remideboer/carlease-main.git
 ```
 
+## Manage submodules
+
+Get latest updates from submodules
+
+````
+git submodule update --remote --merge
+````
+
 ## To run
 
 Three services are used: Gateway, Car Service, Customer Service. The services can be started separately. See
 documentation in the README for each service cd into directory and use maven or use supplied script ```deploy.sh``` to
-clean package and run all 3 in one go to brute force stop use ```terminate.sh```
+clean package and run all 3 in one go.
 
-future if time use docker compose.
+To brute force stop use ```terminate.sh```
+
+- [ ] future if time use docker compose.
 
 ```shell
 mvn spring-boot:run
