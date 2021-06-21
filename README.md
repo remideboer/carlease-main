@@ -57,6 +57,10 @@ ports Gateway: 8080 Customer service: 9092 Car service: 9091
 
 - [x] POST:   {domain}/authenticate - authenticate using username and password to obtain a JWT
 
+#### Customer Contract Data
+
+- [x] GET:    {domain}/contracts?{cust_id,car_id,mileage,interest,duration} - fetches customer data and contract lease rate data for specific customer id and car id
+
 #### CARS
 
 - [x] GET:    {domain}/cars - returns al cars
