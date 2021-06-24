@@ -17,10 +17,36 @@ Get latest updates from submodules
 git submodule update --remote --merge
 ````
 
-## To run
+## Run
+
+### Docker
+build and run with docker compose
+
+```shell
+docker-compose up --build -d
+
+# or
+
+docker-compose up --build -d --remove-orphans
+```
+
+### Manual
 
 Three services are used: Gateway, Car Service, Customer Service. The services can be started separately. See
-documentation in the README for each service cd into directory and use maven or use supplied script ```deploy.sh``` to
+documentation in the README for each service cd into directory and run maven for each service
+
+```shell
+mvn spring-boot:run
+
+# for the development profile use
+
+mvn spring-boot:run -Dspring-boot.run.profiles=dev
+
+```
+
+### Script
+
+Use supplied script ```deploy.sh``` to
 clean package and run all 3 in one go.
 
 To brute force stop use ```terminate.sh```. Only works on *nix systems. On Windows use something like below, 
@@ -35,24 +61,6 @@ foreach ($i in $ports) {
     taskkill /f /pid $processPID
 }
 ````
-
-# Docker 
-- [x] future if time use docker compose.
-
-build and run with docker compose
-
-```shell
-docker-compose up --build -d --remove-orphans
-```
-
-```shell
-mvn spring-boot:run
-
-# for the development profile use
-
-mvn spring-boot:run -Dspring-boot.run.profiles=dev
-
-```
 
 ## Services
 
