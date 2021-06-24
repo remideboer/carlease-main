@@ -36,7 +36,14 @@ foreach ($i in $ports) {
 }
 ````
 
-- [ ] future if time use docker compose.
+# Docker 
+- [x] future if time use docker compose.
+
+build and run with docker compose
+
+```shell
+docker-compose up --build -d --remove-orphans
+```
 
 ```shell
 mvn spring-boot:run
@@ -65,7 +72,7 @@ ports Gateway: 8080 Customer service: 9092 Car service: 9091
 
 - [x] GET:    {domain}/cars - returns al cars
 - [x] GET:    {domain}/cars/{id} - returns specific cars
-- [x] POST {domain}/cars - create new cars
+- [x] POST {domain}/cars - create new carsw
 - [x] DELETE: {domain}/cars{id} - delete specific cars
 - [x] PUT:    {domain}/cars{id} - update specific cars
 - [x] GET:    {domain}/cars{id}/leaserate?{mileage,interest,duration} - calculculates leaserate for given car. required

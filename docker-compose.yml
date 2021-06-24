@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  gateway:
+    build:
+      context: ./carlease-gateway
+    ports:
+    - "8080:8080"
+    links:
+      - car-service
+      - customer-service
+    depends_on:
+      - car-service
+      - customer-service
+  customer-service:
+    build:
+      context: ./carlease-customer-service
+    expose:
+      - "9092"
+  car-service:
+    build:
+      context: ./carlease-car-service
+    expose:
+      - "9091"
